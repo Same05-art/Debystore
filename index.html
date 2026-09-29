@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Debystore — Streetwear moderne</title>
+    <meta
+      name="description"
+      content="Boutique Debystore : streetwear moderne et accessible. Hoodie, sneakers, jogger. Prix en FCFA."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="logo" href="#top">
+          <span class="mark">D</span>
+          <span>Deby<span>store</span></span>
+        </a>
+        <nav class="desk">
+          <a href="#produits">Boutique</a>
+          <a href="#a-propos">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="actions">
+          <button class="icon-btn" onclick="openCart(true)" aria-label="Panier">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7 5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+            <span class="badge" data-cart-count>0</span>
+          </button>
+          <button class="icon-btn menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav">
+        <a href="#produits" onclick="toggleMenu()">Boutique</a>
+        <a href="#a-propos" onclick="toggleMenu()">À propos</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Nouvelle collection 2026</p>
+          <h1>Streetwear<br /><em>moderne</em> & accessible</h1>
+          <p class="lead">
+            Cinq pièces essentielles Debystore. Qualité premium, style urbain,
+            prix en FCFA.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-accent" href="#produits">Voir la collection</a>
+            <a class="btn btn-ghost" href="#a-propos">À propos</a>
+          </div>
+        </div>
+        <img src="hero.jpg" alt="Look Debystore en ville" />
+      </div>
+    </section>
+
+    <div class="band">
+      Livraison gratuite dès 50 000 FCFA · Retours 14 jours · Paiement sécurisé
+    </div>
+
+    <section class="section" id="produits">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Collection</p>
+            <h2>Nos produits</h2>
+          </div>
+          <div class="filters">
+            <button class="chip active" data-filter="all">Tous</button>
+            <button class="chip" data-filter="vetement">Vêtements</button>
+            <button class="chip" data-filter="chaussure">Chaussures</button>
+            <button class="chip" data-filter="accessoire">Accessoires</button>
+          </div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="perks section">
+      <div class="wrap perk-grid">
+        <div>
+          <h3>Livraison rapide</h3>
+          <p>Afrique de l’Ouest. Suivi en temps réel.</p>
+        </div>
+        <div>
+          <h3>Qualité premium</h3>
+          <p>Matières sélectionnées, finitions soignées.</p>
+        </div>
+        <div>
+          <h3>Paiement sécurisé</h3>
+          <p>Mobile Money, cartes, paiement à la livraison.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="a-propos">
+      <div class="wrap about-grid">
+        <div>
+          <p class="kicker">À propos</p>
+          <h2>Debystore, du streetwear accessible</h2>
+          <p>
+            Nous créons des pièces essentielles pour un style urbain moderne
+            sans se ruiner. Chaque produit est pensé pour le confort, la qualité
+            et un look affirmé au quotidien.
+          </p>
+        </div>
+        <div class="stats">
+          <div><strong>5+</strong><span>Produits phares</span></div>
+          <div><strong>100%</strong><span>Style street</span></div>
+          <div><strong>14j</strong><span>Retours gratuits</span></div>
+          <div><strong>24h</strong><span>Expédition</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site" id="contact">
+      <div class="wrap foot-grid">
+        <div>
+          <div class="logo"><span class="mark">D</span> Debystore</div>
+          <p>Streetwear moderne et accessible. Prix justes en FCFA.</p>
+        </div>
+        <div>
+          <strong>Boutique</strong>
+          <p><a href="#produits">Tous les produits</a></p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p>contact@debystore.com</p>
+          <p>Instagram · TikTok</p>
+        </div>
+      </div>
+      <div class="wrap legal">
+        <span>© 2026 Debystore. Maquette d’exercice.</span>
+        <span>Mobile Money · Visa · Mastercard</span>
+      </div>
+    </footer>
+
+    <div class="drawer-bg" id="cart">
+      <aside class="drawer" onclick="event.stopPropagation()">
+        <header>
+          <strong>Votre panier</strong>
+          <button class="icon-btn" onclick="openCart(false)" aria-label="Fermer">✕</button>
+        </header>
+        <div class="items" id="cart-items"></div>
+        <footer>
+          <p>Total <strong id="cart-total">0 FCFA</strong></p>
+          <button class="btn btn-accent" style="width:100%">Commander (simulation)</button>
+        </footer>
+      </aside>
+    </div>
+    <div class="modal" id="modal" onclick="if(event.target.id==='modal')closeModal()"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
