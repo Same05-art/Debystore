@@ -7,9 +7,19 @@ const PRODUCTS = [
     categoryLabel: "Vêtement",
     description:
       "Hoodie oversize en molleton épais, coupe ample. Logo orange discret sur la poitrine.",
+    longDescription:
+      "Le Hoodie Essential est la pièce signature Debystore. Coupe oversize volontairement large, molleton 380 g/m² doux et résistant, capuche doublée et poches kangourou profondes. Le logo orange est brodé discrètement sur la poitrine pour un look street épuré. Idéal en ville comme en voyage : il se porte seul ou en layering. Lavable en machine à 30 °C.",
+    details: ["Molleton 80 % coton / 20 % polyester", "Coupe oversize unisexe", "Logo brodé orange", "Lavable machine 30 °C"],
     colors: ["Noir", "Blanc"],
     sizes: ["S", "M", "L", "XL"],
     image: "hoodie.jpg",
+    rating: 4.8,
+    reviewCount: 24,
+    reviews: [
+      { name: "Moussa K.", city: "Dakar", rating: 5, text: "Qualité au top, la coupe est vraiment oversize comme sur les photos. Je recommande." },
+      { name: "Awa D.", city: "Abidjan", rating: 5, text: "Très confortable et le molleton est épais. Livraison rapide." },
+      { name: "Ibrahim S.", city: "Bamako", rating: 4, text: "Beau hoodie, taille un peu large — prenez une taille en dessous si vous aimez plus ajusté." },
+    ],
   },
   {
     id: "sneakers-aero-run",
@@ -19,9 +29,19 @@ const PRODUCTS = [
     categoryLabel: "Chaussures",
     description:
       "Sneakers légères noir / blanc, détails orange. Confort ville et casual.",
+    longDescription:
+      "Les Aero Run allient légèreté et maintien pour le quotidien urbain. Semelle en EVA amortie, tige mesh respirante et détails orange Debystore. Parfaites pour marcher toute la journée sans fatigue. Semelle antidérapante et semelle intérieure amovible.",
+    details: ["Tige mesh respirante", "Semelle EVA amortie", "Détails orange signature", "Semelle intérieure amovible"],
     colors: ["Noir / Blanc", "Blanc / Orange"],
     sizes: ["40", "41", "42", "43", "44"],
     image: "sneakers.jpg",
+    rating: 4.6,
+    reviewCount: 18,
+    reviews: [
+      { name: "Fatou N.", city: "Thiès", rating: 5, text: "Très légères et stylées. Je les porte tous les jours." },
+      { name: "Omar B.", city: "Ouagadougou", rating: 4, text: "Bon rapport qualité-prix. Un peu étroites au début, ça s’assouplit." },
+      { name: "Khadija M.", city: "Lomé", rating: 5, text: "Confortables dès le premier jour. Design clean." },
+    ],
   },
   {
     id: "tshirt-urban-core",
@@ -30,9 +50,19 @@ const PRODUCTS = [
     category: "vetement",
     categoryLabel: "Vêtement",
     description: "T-shirt oversize 100 % coton, imprimé minimaliste noir et orange.",
+    longDescription:
+      "Le T-shirt Urban Core en coton peigné 180 g/m² offre une coupe oversize moderne et un tombé fluide. Imprimé minimaliste noir et orange, col renforcé et coutures soignées. Une base polyvalente pour tous les looks street Debystore.",
+    details: ["100 % coton peigné", "Coupe oversize", "Imprimé sérigraphie", "Col renforcé"],
     colors: ["Noir", "Blanc", "Gris"],
     sizes: ["S", "M", "L", "XL"],
     image: "tshirt.jpg",
+    rating: 4.7,
+    reviewCount: 31,
+    reviews: [
+      { name: "Yacine T.", city: "Dakar", rating: 5, text: "Coton doux, coupe parfaite. J’en ai pris deux." },
+      { name: "Mariama S.", city: "Conakry", rating: 5, text: "L’imprimé ne part pas au lavage. Super qualité." },
+      { name: "Cheikh A.", city: "Saint-Louis", rating: 4, text: "Très beau, un peu transparent en blanc — normal pour du coton léger." },
+    ],
   },
   {
     id: "jogger-street-fit",
@@ -41,9 +71,19 @@ const PRODUCTS = [
     category: "vetement",
     categoryLabel: "Vêtement",
     description: "Jogger coton stretch, poches cargo et taille élastique.",
+    longDescription:
+      "Le Jogger Street Fit combine confort sport et look urbain. Coton stretch souple, poches cargo pratiques, taille élastique avec cordon et bas de jambe resserré. Idéal avec un hoodie ou un t-shirt Debystore pour un ensemble cohérent.",
+    details: ["Coton stretch", "Poches cargo", "Taille élastique + cordon", "Bas resserré"],
     colors: ["Noir", "Gris chiné"],
     sizes: ["S", "M", "L", "XL"],
     image: "jogger.jpg",
+    rating: 4.5,
+    reviewCount: 15,
+    reviews: [
+      { name: "Boubacar D.", city: "Bamako", rating: 5, text: "Confortable et stylé. Les poches cargo sont utiles." },
+      { name: "Ndeye F.", city: "Dakar", rating: 4, text: "Bonne qualité, taille fidèle. Je recommande." },
+      { name: "Amadou L.", city: "Niamey", rating: 5, text: "Parfait pour la ville. Tombé nickel." },
+    ],
   },
   {
     id: "deby-cap",
@@ -52,9 +92,19 @@ const PRODUCTS = [
     category: "accessoire",
     categoryLabel: "Accessoire",
     description: "Snapback structurée, logo orange brodé. Réglable.",
+    longDescription:
+      "La Deby Cap est une snapback structurée avec visière plate et logo orange brodé. Réglable à l’arrière pour un ajustement précis. Accessoire indispensable pour finaliser un look streetwear Debystore.",
+    details: ["Structure fermée", "Logo orange brodé", "Réglable (snapback)", "Taille unique"],
     colors: ["Noir", "Blanc"],
     sizes: ["Unique"],
     image: "cap.jpg",
+    rating: 4.9,
+    reviewCount: 42,
+    reviews: [
+      { name: "Saliou M.", city: "Dakar", rating: 5, text: "Broderie nickel, tient bien sur la tête." },
+      { name: "Aissatou R.", city: "Abidjan", rating: 5, text: "Très belle finition. Cadeau parfait." },
+      { name: "Ibrahima C.", city: "Ziguinchor", rating: 5, text: "Qualité premium pour le prix. Je rachète." },
+    ],
   },
 ];
 
@@ -98,81 +148,54 @@ function add(p, size, color) {
   openCart(true);
 }
 
+function stars(n) {
+  const full = Math.floor(n);
+  const half = n - full >= 0.5 ? 1 : 0;
+  let s = "★".repeat(full);
+  if (half) s += "½";
+  s += "☆".repeat(5 - full - half);
+  return s;
+}
+
 function renderProducts() {
+  const grid = document.getElementById("grid");
+  if (!grid) return;
   const list =
     filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
-  document.getElementById("grid").innerHTML = list
+  grid.innerHTML = list
     .map(
       (p) => `
       <article class="card">
-        <div class="thumb" onclick="openProduct('${p.id}')">
+        <a class="thumb" href="product.html?id=${p.id}">
           <img src="${p.image}" alt="${p.name}">
           <span class="tag">${p.categoryLabel}</span>
-        </div>
+        </a>
         <div class="card-body">
-          <h3>${p.name}</h3>
+          <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
+          <p class="card-rating"><span class="stars">${stars(p.rating)}</span> <span class="muted">${p.rating} (${p.reviewCount})</span></p>
           <p class="price">${money(p.price)}</p>
-          <button class="btn" onclick="addFromCard('${p.id}')">Ajouter au panier</button>
+          <a class="btn" href="product.html?id=${p.id}">Voir le produit</a>
         </div>
       </article>`,
     )
     .join("");
-  document.querySelectorAll(".chip").forEach((c) => {
+  document.querySelectorAll(".chip[data-filter]").forEach((c) => {
     c.classList.toggle("active", c.dataset.filter === filter);
   });
 }
 
 function addFromCard(id) {
   const p = PRODUCTS.find((x) => x.id === id);
-  add(p, p.sizes[0], p.colors[0]);
+  if (p) add(p, p.sizes[0], p.colors[0]);
 }
 
 function openProduct(id) {
-  selected = PRODUCTS.find((x) => x.id === id);
-  selSize = selected.sizes[0];
-  selColor = selected.colors[0];
-  document.getElementById("modal").classList.add("open");
-  drawModal();
-}
-
-function drawModal() {
-  const p = selected;
-  document.getElementById("modal").innerHTML = `
-    <div class="modal-card">
-      <div class="modal-grid">
-        <img src="${p.image}" alt="${p.name}">
-        <div class="modal-info">
-          <button class="close" onclick="closeModal()" aria-label="Fermer">✕</button>
-          <p class="kicker">${p.categoryLabel}</p>
-          <h2>${p.name}</h2>
-          <p class="price">${money(p.price)}</p>
-          <p>${p.description}</p>
-          <p style="font-weight:600;margin:16px 0 8px">Couleur</p>
-          <div class="filters">
-            ${p.colors
-              .map(
-                (c) =>
-                  `<button class="chip ${c === selColor ? "active" : ""}" onclick="selColor='${c}';drawModal()">${c}</button>`,
-              )
-              .join("")}
-          </div>
-          <p style="font-weight:600;margin:16px 0 8px">Taille</p>
-          <div class="filters">
-            ${p.sizes
-              .map(
-                (s) =>
-                  `<button class="chip ${s === selSize ? "active" : ""}" onclick="selSize='${s}';drawModal()">${s}</button>`,
-              )
-              .join("")}
-          </div>
-          <button class="btn btn-accent" style="width:100%;margin-top:20px" onclick="add(selected, selSize, selColor); closeModal();">Ajouter au panier</button>
-        </div>
-      </div>
-    </div>`;
+  window.location.href = "product.html?id=" + encodeURIComponent(id);
 }
 
 function closeModal() {
-  document.getElementById("modal").classList.remove("open");
+  const m = document.getElementById("modal");
+  if (m) m.classList.remove("open");
 }
 
 function renderCart() {
@@ -183,8 +206,10 @@ function renderCart() {
   });
   const box = document.getElementById("cart-items");
   const form = document.getElementById("order-form");
+  if (!box) return;
   if (!cart.length) {
-    box.innerHTML = '<p style="text-align:center;color:var(--muted);padding:48px 0">Votre panier est vide.</p>';
+    box.innerHTML =
+      '<p style="text-align:center;color:var(--muted);padding:48px 0">Votre panier est vide.</p>';
     if (form) form.style.display = "none";
   } else {
     box.innerHTML = cart
@@ -197,9 +222,9 @@ function renderCart() {
             <div style="font-size:12px;color:var(--muted)">${i.color} · ${i.size}</div>
             <div class="price">${money(i.price)}</div>
             <div class="qty">
-              <button onclick="changeQty('${keyOf(i)}',-1)">−</button>
+              <button type="button" onclick="changeQty('${keyOf(i)}',-1)">−</button>
               <span>${i.qty}</span>
-              <button onclick="changeQty('${keyOf(i)}',1)">+</button>
+              <button type="button" onclick="changeQty('${keyOf(i)}',1)">+</button>
             </div>
           </div>
         </div>`,
@@ -207,7 +232,8 @@ function renderCart() {
       .join("");
     if (form) form.style.display = "flex";
   }
-  document.getElementById("cart-total").textContent = money(total());
+  const tot = document.getElementById("cart-total");
+  if (tot) tot.textContent = money(total());
 }
 
 function changeQty(k, d) {
@@ -220,7 +246,8 @@ function changeQty(k, d) {
 }
 
 function openCart(open) {
-  document.getElementById("cart").classList.toggle("open", open);
+  const el = document.getElementById("cart");
+  if (el) el.classList.toggle("open", open);
 }
 
 function submitOrder(e) {
@@ -236,7 +263,6 @@ function submitOrder(e) {
     alert("Veuillez remplir tous les champs.");
     return false;
   }
-  // Sauvegarde optionnelle de la dernière commande (affichage sur la page merci)
   try {
     sessionStorage.setItem(
       "debystore-last-order",
@@ -259,16 +285,163 @@ function submitOrder(e) {
 }
 
 function toggleMenu() {
-  document.getElementById("mobile-nav").classList.toggle("open");
+  const nav = document.getElementById("mobile-nav");
+  if (nav) nav.classList.toggle("open");
+}
+
+function initProductPage() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const p = PRODUCTS.find((x) => x.id === id);
+  const root = document.getElementById("product-root");
+  if (!root) return;
+  if (!p) {
+    root.innerHTML = `
+      <div class="wrap" style="padding:64px 0;text-align:center">
+        <h1>Produit introuvable</h1>
+        <p style="color:var(--muted)">Ce produit n’existe pas ou a été retiré.</p>
+        <a class="btn btn-accent" href="index.html#produits" style="margin-top:20px">Retour à la boutique</a>
+      </div>`;
+    return;
+  }
+  document.title = p.name + " — Debystore";
+  selSize = p.sizes[0];
+  selColor = p.colors[0];
+  selected = p;
+  drawProductPage(p);
+}
+
+function drawProductPage(p) {
+  const root = document.getElementById("product-root");
+  const related = PRODUCTS.filter((x) => x.id !== p.id).slice(0, 3);
+  root.innerHTML = `
+    <div class="wrap product-page">
+      <nav class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="index.html#produits">Boutique</a>
+        <span>/</span>
+        <span>${p.name}</span>
+      </nav>
+      <div class="product-hero">
+        <div class="product-gallery">
+          <img src="${p.image}" alt="${p.name}" id="product-main-img">
+        </div>
+        <div class="product-info">
+          <p class="kicker">${p.categoryLabel}</p>
+          <h1>${p.name}</h1>
+          <p class="product-rating">
+            <span class="stars">${stars(p.rating)}</span>
+            <span>${p.rating} · ${p.reviewCount} avis</span>
+          </p>
+          <p class="price product-price">${money(p.price)}</p>
+          <p class="product-desc">${p.longDescription || p.description}</p>
+          <p class="opt-label">Couleur</p>
+          <div class="filters" id="color-opts">
+            ${p.colors
+              .map(
+                (c) =>
+                  `<button type="button" class="chip ${c === selColor ? "active" : ""}" data-color="${c}">${c}</button>`,
+              )
+              .join("")}
+          </div>
+          <p class="opt-label">Taille</p>
+          <div class="filters" id="size-opts">
+            ${p.sizes
+              .map(
+                (s) =>
+                  `<button type="button" class="chip ${s === selSize ? "active" : ""}" data-size="${s}">${s}</button>`,
+              )
+              .join("")}
+          </div>
+          <button type="button" class="btn btn-accent product-add" id="add-to-cart-btn">Ajouter au panier</button>
+          <ul class="product-details">
+            ${(p.details || []).map((d) => `<li>${d}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <section class="reviews-section">
+        <h2>Avis clients</h2>
+        <p class="reviews-summary">${stars(p.rating)} <strong>${p.rating}/5</strong> — basé sur ${p.reviewCount} avis</p>
+        <div class="reviews-list">
+          ${(p.reviews || [])
+            .map(
+              (r) => `
+            <article class="review-card">
+              <div class="review-head">
+                <strong>${r.name}</strong>
+                <span class="muted">${r.city}</span>
+                <span class="stars">${stars(r.rating)}</span>
+              </div>
+              <p>${r.text}</p>
+            </article>`,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      ${
+        related.length
+          ? `
+      <section class="related-section">
+        <h2>Vous aimerez aussi</h2>
+        <div class="grid related-grid">
+          ${related
+            .map(
+              (r) => `
+            <article class="card">
+              <a class="thumb" href="product.html?id=${r.id}">
+                <img src="${r.image}" alt="${r.name}">
+                <span class="tag">${r.categoryLabel}</span>
+              </a>
+              <div class="card-body">
+                <h3><a href="product.html?id=${r.id}">${r.name}</a></h3>
+                <p class="price">${money(r.price)}</p>
+                <a class="btn" href="product.html?id=${r.id}">Voir</a>
+              </div>
+            </article>`,
+            )
+            .join("")}
+        </div>
+      </section>`
+          : ""
+      }
+    </div>`;
+
+  document.querySelectorAll("#color-opts .chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      selColor = btn.dataset.color;
+      document.querySelectorAll("#color-opts .chip").forEach((c) =>
+        c.classList.toggle("active", c.dataset.color === selColor),
+      );
+    });
+  });
+  document.querySelectorAll("#size-opts .chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      selSize = btn.dataset.size;
+      document.querySelectorAll("#size-opts .chip").forEach((c) =>
+        c.classList.toggle("active", c.dataset.size === selSize),
+      );
+    });
+  });
+  document.getElementById("add-to-cart-btn").addEventListener("click", () => {
+    add(p, selSize, selColor);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
-  renderCart();
-  document.querySelectorAll(".chip[data-filter]").forEach((c) => {
-    c.addEventListener("click", () => {
-      filter = c.dataset.filter;
-      renderProducts();
+  if (document.getElementById("grid")) {
+    renderProducts();
+    document.querySelectorAll(".chip[data-filter]").forEach((c) => {
+      c.addEventListener("click", () => {
+        filter = c.dataset.filter;
+        renderProducts();
+      });
     });
-  });
+  }
+  if (document.getElementById("product-root")) {
+    initProductPage();
+  }
+  renderCart();
 });
