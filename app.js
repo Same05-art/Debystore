@@ -182,8 +182,10 @@ function renderCart() {
     el.style.display = n ? "grid" : "none";
   });
   const box = document.getElementById("cart-items");
+  const form = document.getElementById("order-form");
   if (!cart.length) {
     box.innerHTML = '<p style="text-align:center;color:var(--muted);padding:48px 0">Votre panier est vide.</p>';
+    if (form) form.style.display = "none";
   } else {
     box.innerHTML = cart
       .map(
@@ -203,6 +205,7 @@ function renderCart() {
         </div>`,
       )
       .join("");
+    if (form) form.style.display = "flex";
   }
   document.getElementById("cart-total").textContent = money(total());
 }
@@ -218,6 +221,41 @@ function changeQty(k, d) {
 
 function openCart(open) {
   document.getElementById("cart").classList.toggle("open", open);
+}
+
+function submitOrder(e) {
+  e.preventDefault();
+  if (!cart.length) {
+    alert("Votre panier est vide.");
+    return false;
+  }
+  const name = document.getElementById("order-name").value.trim();
+  const address = document.getElementById("order-address").value.trim();
+  const phone = document.getElementById("order-phone").value.trim();
+  if (!name || !address || !phone) {
+    alert("Veuillez remplir tous les champs.");
+    return false;
+  }
+  // Sauvegarde optionnelle de la dernière commande (affichage sur la page merci)
+  try {
+    sessionStorage.setItem(
+      "debystore-last-order",
+      JSON.stringify({
+        name,
+        address,
+        phone,
+        total: total(),
+        items: cart,
+        date: new Date().toISOString(),
+      }),
+    );
+  } catch (_) {}
+  cart = [];
+  save();
+  renderCart();
+  openCart(false);
+  window.location.href = "merci.html";
+  return false;
 }
 
 function toggleMenu() {

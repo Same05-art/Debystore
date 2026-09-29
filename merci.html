@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Merci — Debystore</title>
+    <meta name="description" content="Votre commande Debystore a bien été reçue." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .thanks {
+        min-height: calc(100vh - 64px);
+        display: grid;
+        place-items: center;
+        padding: 48px 16px;
+      }
+      .thanks-card {
+        width: min(480px, 100%);
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 40px 28px;
+        text-align: center;
+        box-shadow: 0 12px 40px rgba(12, 12, 12, 0.06);
+      }
+      .thanks-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: var(--ink);
+        display: grid;
+        place-items: center;
+        font-size: 1.75rem;
+        font-weight: 800;
+      }
+      .thanks-card h1 {
+        font-family: var(--display);
+        font-size: 1.75rem;
+        margin: 0 0 8px;
+      }
+      .thanks-card .lead {
+        color: var(--muted);
+        margin: 0 0 24px;
+        line-height: 1.5;
+      }
+      .thanks-details {
+        text-align: left;
+        background: var(--fog);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 24px;
+        font-size: 0.9rem;
+      }
+      .thanks-details p {
+        margin: 0 0 8px;
+      }
+      .thanks-details p:last-child {
+        margin-bottom: 0;
+      }
+      .thanks-details strong {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap bar">
+        <a class="logo" href="index.html">
+          <span class="mark">D</span>
+          <span>Deby<span>store</span></span>
+        </a>
+        <nav class="desk">
+          <a href="index.html#produits">Boutique</a>
+          <a href="index.html#a-propos">À propos</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="thanks">
+      <div class="thanks-card">
+        <div class="thanks-icon">✓</div>
+        <h1>Merci pour votre commande !</h1>
+        <p class="lead">
+          Nous avons bien reçu votre demande. Notre équipe vous contactera
+          rapidement pour confirmer la livraison.
+        </p>
+        <div class="thanks-details" id="order-summary" style="display: none"></div>
+        <a class="btn btn-accent" href="index.html">Retour à la boutique</a>
+      </div>
+    </main>
+
+    <script>
+      try {
+        const raw = sessionStorage.getItem("debystore-last-order");
+        if (raw) {
+          const o = JSON.parse(raw);
+          const box = document.getElementById("order-summary");
+          box.style.display = "block";
+          const total =
+            typeof o.total === "number"
+              ? o.total.toLocaleString("fr-FR") + " FCFA"
+              : "";
+          box.innerHTML = `
+            <p><strong>Nom</strong>${o.name || "—"}</p>
+            <p><strong>Adresse</strong>${o.address || "—"}</p>
+            <p><strong>Téléphone</strong>${o.phone || "—"}</p>
+            ${total ? `<p><strong>Total</strong>${total}</p>` : ""}
+          `;
+        }
+      } catch (_) {}
+    </script>
+  </body>
+</html>

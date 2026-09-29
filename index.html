@@ -154,7 +154,21 @@
         <div class="items" id="cart-items"></div>
         <footer>
           <p>Total <strong id="cart-total">0 FCFA</strong></p>
-          <button class="btn btn-accent" style="width:100%">Commander (simulation)</button>
+          <form id="order-form" class="order-form" onsubmit="return submitOrder(event)">
+            <label>
+              Nom complet
+              <input type="text" name="name" id="order-name" required placeholder="Ex. Awa Diallo" autocomplete="name" />
+            </label>
+            <label>
+              Adresse
+              <input type="text" name="address" id="order-address" required placeholder="Quartier, ville" autocomplete="street-address" />
+            </label>
+            <label>
+              Numéro de téléphone
+              <input type="tel" name="phone" id="order-phone" required placeholder="Ex. 77 123 45 67" autocomplete="tel" />
+            </label>
+            <button type="submit" class="btn btn-accent" style="width:100%">Commander</button>
+          </form>
         </footer>
       </aside>
     </div>

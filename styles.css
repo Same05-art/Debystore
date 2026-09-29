@@ -493,6 +493,44 @@ footer.site {
   border-top: 1px solid var(--line);
 }
 
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.order-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.order-form input {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.order-form input:focus {
+  border-color: var(--accent);
+}
+
+.order-form input::placeholder {
+  color: #a8a59e;
+  font-weight: 400;
+}
+
 .modal {
   position: fixed;
   inset: 0;
